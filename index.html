@@ -16,19 +16,18 @@
   <script src="firebase-config.js"></script>
 </head>
 <body>
-  <main>
-    <form class="form">
-      <section class="emailSenha">
-        <label>E-mail:</label>
-        <input class="sign-email" type="email" />
-      </section>
-      <section class="emailSenha">
-        <label>Senha:</label>
-        <input class="sign-password" type="password" />
-      </section>
-      <button class="sign-in-button bg-primary text-white">Entrar</button>
-      <button class="sign-up-button bg-primary text-white">Cadastrar</button>
-    </form>
+  <main class="container d-flex justify-content-center">
+      <form class="form">
+        <h1 class="d-flex justify-content-center">Growing Groot</h1>
+        <section class="emailSenha d-flex justify-content-center">
+          <input class="sign-email d-flex justify-content-center" placeholder="E-mail" type="email" />
+        </section>
+        <section class="emailSenha d-flex justify-content-center">
+          <input class="sign-password" placeholder="Senha" type="password" />
+        </section>
+        <button class="button sign-in-button btn-dark d-flex">Entrar</button>
+        <button class="button sign-up-button btn-dark d-flex">Cadastrar</button>
+      </form>
   </main>
 
   <script
