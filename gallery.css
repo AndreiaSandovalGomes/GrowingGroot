@@ -12,8 +12,8 @@ amarelinho - #E3E06B
 
 */
 body {
-  background-color: #6FA545;
-  color: #281916;
+  background-color: #281916;
+  color: #F5BC6B;
 }
 .main-gallery {
   height: 100vh;
@@ -30,6 +30,11 @@ body {
   height: 200px;
   width: 150px;
   background-color: #012010;
+}
+.sticker-img img {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
 }
 .hero-name {
   font-family: 'Permanent Marker', cursive;
