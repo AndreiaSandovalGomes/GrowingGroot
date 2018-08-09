@@ -1,7 +1,15 @@
+/*
+fontes para o app
+font-family: 'Play', sans-serif;
+font-family: 'Permanent Marker', cursive;
+
+
+*/
 body{
   margin-top: 20vw;
   display: flex;
   justify-content: center;
+  font-family: 'Play', sans-serif;
 }
 .form{
   background-color: #c2c2a3;

@@ -1,5 +1,14 @@
 body {
   background-color: black;
+  font-family: 'Play', sans-serif;
+}
+
+.splash, .header-title {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.title-splash, .gif-splash {
+  display: none;
 }
 
 main {
@@ -13,6 +22,7 @@ main {
   margin: auto;
 }
 
+<<<<<<< HEAD
 .btn {
   width: 96%;
   box-sizing: border-box;
@@ -33,3 +43,21 @@ span.pts {
   position: relative;
   margin-left: 10px;
 }
+=======
+.h-fit-content {
+  height: fit-content;
+}
+
+header {
+  height: 9vh;
+}
+
+.header-logo {
+  height: 9vh;
+}
+.level-progress{
+  color:white;
+  display: flex;
+  flex-direction: row;
+}
+>>>>>>> a30dcd209fea73802390d79bcd88d4ac6e6aa510
