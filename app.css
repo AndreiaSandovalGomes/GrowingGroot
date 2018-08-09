@@ -11,3 +11,7 @@ main {
   max-height: 736px;
   margin: auto;
 }
+
+.h-fit-content {
+  height: fit-content;
+}
