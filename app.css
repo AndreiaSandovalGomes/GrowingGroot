@@ -22,7 +22,6 @@ main {
   margin: auto;
 }
 
-<<<<<<< HEAD
 .btn {
   width: 96%;
   box-sizing: border-box;
@@ -43,7 +42,6 @@ span.pts {
   position: relative;
   margin-left: 10px;
 }
-=======
 .h-fit-content {
   height: fit-content;
 }
@@ -60,4 +58,3 @@ header {
   display: flex;
   flex-direction: row;
 }
->>>>>>> a30dcd209fea73802390d79bcd88d4ac6e6aa510
