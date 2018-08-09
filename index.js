@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $(".sign-up-button").click(function(e){
     e.preventDefault();
-    var email = $("sign-up-email").val();
-    var password = $("sign-up-password").val();
+    var email = $(".sign-up-email").val();
+    var password = $(".sign-up-password").val();
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(){
@@ -16,8 +16,8 @@ $(document).ready(function() {
     })
     $(".sign-in-button").click(function(e){
       e.preventDefault();
-      var email = $("sign-in-email").val();
-      var password = $("sign-in-password").val();
+      var email = $(".sign-in-email").val();
+      var password = $(".sign-in-password").val();
 
       firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function(){
