@@ -7,7 +7,8 @@ $(document).ready(function() {
   // $(".includePoints").click(function(e))
   // e.preventDefault();
 
-  //barra de xp
+//barra de xp
+var totalPoints = 100;
 const levelOne = 30;
 const levelTwo = 50;
 const levelThree = 70;
