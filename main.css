@@ -1,1 +1,26 @@
-css
+body{
+  margin-top: 20vw;
+  display: flex;
+  justify-content: center;
+}
+.form{
+  background-color: #c2c2a3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60vw;
+  height: 46vh;
+  padding: 6vw;
+}
+.emailSenha{
+  display: flex;
+  flex-direction: row;
+}
+.emailSenha input{
+  width: 40vw;
+  margin-left: 6px;
+}
+.form button{
+  width: 31vw;
+  margin-left: 75px;
+}
