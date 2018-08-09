@@ -3,7 +3,7 @@ body {
   font-family: 'Play', sans-serif;
 }
 
-#splash {
+.splash, .header-title {
   font-family: 'Permanent Marker', cursive;
 }
 
@@ -22,6 +22,39 @@ main {
   margin: auto;
 }
 
+.btn {
+  width: 96%;
+  box-sizing: border-box;
+}
+
+.task {
+  background-color: #fff;
+  margin: 0px 10px 5px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+span.pts {
+  font-style: italic;
+  color: #909090;
+  font-size: 0.8em;
+  bottom: 1px;
+  position: relative;
+  margin-left: 10px;
+}
 .h-fit-content {
   height: fit-content;
+}
+
+header {
+  height: 9vh;
+}
+
+.header-logo {
+  height: 9vh;
+}
+.level-progress{
+  color:white;
+  display: flex;
+  flex-direction: row;
 }
