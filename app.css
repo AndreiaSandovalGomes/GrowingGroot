@@ -9,5 +9,9 @@ main {
   height: 100vh;
   max-width: 414px;
   max-height: 736px;
-  margin: auto;
+}
+.level-progress{
+  color:white;
+  display: flex;
+  flex-direction: row;
 }
