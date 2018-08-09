@@ -1,13 +1,16 @@
-/*
-fontes para o app
-font-family: 'Play', sans-serif;
-font-family: 'Permanent Marker', cursive;
-
-
-*/
 body {
   background-color: black;
+  font-family: 'Play', sans-serif;
 }
+
+#splash {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.title-splash, .gif-splash {
+  display: none;
+}
+
 main {
   background-image: url(imgs/groot-img/groot___spores_by_megatruh-d7ysf32.jpg);
   background-repeat: no-repeat;
@@ -17,4 +20,8 @@ main {
   max-width: 414px;
   max-height: 736px;
   margin: auto;
+}
+
+.h-fit-content {
+  height: fit-content;
 }
