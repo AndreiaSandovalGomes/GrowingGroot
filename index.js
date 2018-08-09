@@ -5,7 +5,9 @@ $(document).ready(function() {
     var password = $(".sign-password").val();
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then(function(){
+      .then(function(response) {
+        // var userId = response.user.uid;
+        // redirectToTasks(userId);
         window.location = "app.html";
       })
       .catch(function(error){
@@ -20,7 +22,9 @@ $(document).ready(function() {
       var password = $(".sign-password").val();
 
       firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(function(){
+        .then(function(response) {
+          // var userId = response.user.uid;
+          // redirectToTasks(userId);
           window.location = "app.html";
         })
         .catch(function(error) {
