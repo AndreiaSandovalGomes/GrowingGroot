@@ -25,3 +25,8 @@ main {
 .h-fit-content {
   height: fit-content;
 }
+.level-progress{
+  color:white;
+  display: flex;
+  flex-direction: row;
+}
