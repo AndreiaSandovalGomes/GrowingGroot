@@ -1,6 +1,7 @@
 body {
   background-color: black;
 }
+
 main {
   background-image: url(imgs/groot-img/groot___spores_by_megatruh-d7ysf32.jpg);
   background-repeat: no-repeat;
@@ -10,4 +11,25 @@ main {
   max-width: 414px;
   max-height: 736px;
   margin: auto;
+}
+
+.btn {
+  width: 96%;
+  box-sizing: border-box;
+}
+
+.task {
+  background-color: #fff;
+  margin: 0px 10px 5px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+span.pts {
+  font-style: italic;
+  color: #909090;
+  font-size: 0.8em;
+  bottom: 1px;
+  position: relative;
+  margin-left: 10px;
 }

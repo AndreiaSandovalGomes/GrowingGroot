@@ -6,6 +6,7 @@
   <title>Growing Groot</title>
   <script src="https://www.gstatic.com/firebase/4.12.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
   <script>
    var config = {
    apiKey: "AIzaSyCbpMaoxb7Lp9OlJcKwWl8WLHjaf6cp-nQ",
@@ -33,14 +34,18 @@
     </div> -->
     <header>
       <img src="" alt="">
-      <h1></h1>
+      <h1> Growing Groot </h1>
       <img src="" alt="">
     </header>
     <section class="d-flex flex-row flex-column">
-      <button type="button" class="btn btn-success m-2">Casa</button>
-      <button type="button" class="btn btn-success m-2">Trabalho</button>
-      <button type="button" class="btn btn-success m-2">Lazer</button>
-      <button type="button" class="btn btn-success m-2">Dicas</button>            
+      <div class="total-points"></div>
+      <button type="button" class="btn btn-success m-2 btn-category" id="home">Casa</button>
+      <div class="category-home category"></div>
+      <button type="button" class="btn btn-success m-2 btn-category" id="work">Trabalho</button>
+      <div class="category-work category"></div>
+      <button type="button" class="btn btn-success m-2 btn-category" id="fun">Lazer</button>
+      <div class="category-fun category"></div>
+      <button type="button" class="btn btn-success m-2 btn-category" id="tips">Dicas</button>            
     </section>
 
 
