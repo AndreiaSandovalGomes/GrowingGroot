@@ -54,4 +54,15 @@ span.pts {
 header {
   height: 9vh;
 }
-
+.header-img {
+  width: 100%;
+  height: 100%;
+}
+.header-logo {
+  width: 15vw;
+  height: 100%;
+}
+.header-hero {
+  width: 15vw;
+  height: 100%;
+}
