@@ -89,6 +89,44 @@ function countPoints() {
   //enviar valor pro banco de dados
   // levelPoints(sum);
 }
+//barra de status
+const levelOne = 30;
+const levelTwo = 50;
+const levelThree = 70;
+const levelFour = 100;
+const levelFive = 150;
+function levelPoints(levelAtual){
+  if(levelAtual < levelOne){
+    $("#levelNivel").html("0");
+    percentBarFunc(levelAtual);
+    gallery(0); //aqui carol
+  }
+  if (levelAtual >= levelOne){
+    $("#levelNivel").html("1");
+    percentBarFunc(levelAtual);
+    gallery(1); //aqui carol
+  }
+  if (levelAtual >= levelTwo + levelOne){
+    $("#levelNivel").html("2");
+    percentBarFunc(levelAtual);
+    gallery(2); //aqui carol
+  }
+  if (levelAtual >= levelThree + levelTwo + levelOne){
+    $("#levelNivel").html("3");
+    percentBarFunc(levelAtual);
+    gallery(3); //aqui carol
+  }
+  if (levelAtual >= levelFour + levelThree + levelTwo + levelOne){
+    $("#levelNivel").html("4");
+    percentBarFunc(levelAtual);
+    gallery(4); //aqui carol
+  }
+}
+function percentBarFunc (levelAtual){
+  var percentBar = 0;
+  percentBar = parseInt(levelAtual/levelFive*100);
+  $("#levelProgress").width(percentBar + '%');
+}
 
 var allTasks = {
   tasksHome: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Apaguei as luzes ao sair do ambiente","Desliguei todos os aparelhos da tomada"],
