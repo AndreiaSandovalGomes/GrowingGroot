@@ -16,10 +16,6 @@ body {
   color: #F5BC6B;
 }
 .main-gallery {
-  background-image: url(imgs/groot-img/groot___spores_by_megatruh-d7ysf32.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
   height: 100vh;
   max-width: 414px;
   max-height: 736px;
