@@ -31,37 +31,8 @@ function getTasksFromDB() {
         var childData = childSnapshot.val();
         $(".retorno").text(childData);
       });
-    });
+  });
 }
-
-
-  $(".btnSumPoints").click(addTasksClick);
-
-
-  function addTasksClick(event) {
-    event.preventDefault();
-
-    var newTask = $("#points").val();
-    var taskFromDB = addTaskToDB(newTask);
-
-    createListItem(newTask, taskFromDB.key)
-  }
-  function addTaskToDB(text) {
-    return database.ref("Pontuacao" + USER_ID).set({
-      text: text
-    });
-  }
-  function getTasksFromDB() {
-    database.ref("pontuacao" + USER_ID).once('value')
-      .then(function(snapshot) {
-        snapshot.forEach(function(childSnapshot) {
-          var childKey = childSnapshot.key;
-          var childData = childSnapshot.val();
-          createListItem(childData.text, childKey);
-          console.log("salvo");
-        });
-      });
-  };
 
   $(".btn-category").click(function(e) {
   e.preventDefault();
