@@ -1,6 +1,9 @@
 var database = firebase.database();
 var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
+//chamada de função para carregar os pontos
+levelPoints(getTasksFromDB());
+
 function addTasksClick(event) {
   event.preventDefault();
   var newTask = $("#points").val();
