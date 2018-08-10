@@ -10,6 +10,8 @@ $(document).ready(function() {
   getTasksFromDB();
   $(".btnSumPoints").click(addTasksClick);
 });
+//chamada de função para carregar os pontos
+levelPoints(getTasksFromDB());
 
 function addTasksClick(event) {
   event.preventDefault();
