@@ -5,6 +5,11 @@ body {
 .splash, .header-title {
   font-family: 'Permanent Marker', cursive;
 }
+.splash {
+  max-width: 414px;
+  max-height: 736px;
+  margin: auto;
+}
 .title-splash, .gif-splash {
   display: none;
 }
