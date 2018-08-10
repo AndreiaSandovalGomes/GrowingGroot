@@ -1,55 +1,52 @@
-// var database = firebase.database();
-// var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
-//
+var database = firebase.database();
+var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
+
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
   $('.gif-splash').delay('2000').fadeIn('slow');
   $('.splash-content').delay('5000').fadeOut('slow');
   $('.splash').delay('6000').fadeOut('slow');
 
-//   getTasksFromDB();
-//   $(".btnSumPoints").click(addTasksClick);
-// });
-//
-// function addTasksClick(event) {
-//   event.preventDefault();
-//   var newTask = $("#points").val();
-//   var taskFromDB = addTaskToDB(newTask);
-// }
-//
-// function addTaskToDB(text) {
-//   return database.ref("points/" + USER_ID).set({
-//     sumPoints: text
-//   });
-// }
-//
-// function getTasksFromDB() {
-//   debugger
-//   database.ref("points/" + USER_ID).once('value')
-//   .then(function(snapshot) {
-//     snapshot.forEach(function(childSnapshot) {
-//       var childKey = childSnapshot.key;
-//       var childData = childSnapshot.val();
-//       console.log(childData.sumPoints);
-//     $(".retorno").(childData.sumPoints);
-//     });
-//   });
-// }
-// function returnItem(text, key) {
-//   $(".retorno").text(text);
-// }
-//
-//
+  getTasksFromDB();
+  $(".btnSumPoints").click(addTasksClick);
+});
+
+function addTasksClick(event) {
+  event.preventDefault();
+  var newTask = $("#points").val();
+  var taskFromDB = addTaskToDB(newTask);
+}
+
+function addTaskToDB(text) {
+  return database.ref("points/" + USER_ID).set({
+    sumPoints: text
+  });
+}
+
+function getTasksFromDB() {
+  debugger
+  database.ref("points/" + USER_ID).once('value')
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var childKey = childSnapshot.key;
+      var childData = childSnapshot.val();
+      console.log(childData.sumPoints);
+    $(".retorno").(childData.sumPoints);
+    });
+  });
+}
+function returnItem(text, key) {
+  $(".retorno").text(text);
+}
+
+
 
 
 var database = firebase.database();
 var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
-<<<<<<< HEAD
 
 var points = 0; //valor do banco de dados
 $(".total-points").text(points);
-=======
->>>>>>> 9af0809fdcc1548045375e680e4c964c11d3ba7a
 
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
@@ -68,24 +65,6 @@ function addTasksClick(event) {
   getTasksFromDB();
 }
 
-<<<<<<< HEAD
-  // $(".includePoints").click(function(e))
-  // e.preventDefault();
-
-//barra de xp
-// var totalPoints = 100;
-// const levelOne = 30;
-// const levelTwo = 50;
-// const levelThree = 70;
-// const levelFour = 100;
-// function levelPoints (totalPoints){
-//   var levelAtual = 0;
-//   var changeLevel = $("#levelNivel");
-//   if (totalPoints >= levelOne){
-//     changeLevel.html("1");
-//   }
-// }
-=======
 function addTaskToDB(text) {
   return database.ref("points/" + USER_ID).set({
     sumPoints: text
@@ -103,7 +82,6 @@ function getTasksFromDB() {
 }
 
 
->>>>>>> 9af0809fdcc1548045375e680e4c964c11d3ba7a
   $(".btnSumPoints").click(addTasksClick);
 
 
