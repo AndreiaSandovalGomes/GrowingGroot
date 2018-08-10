@@ -55,3 +55,11 @@ header {
   height: 9vh;
 }
 
+.header-logo {
+  height: 9vh;
+}
+.level-progress{
+  color:white;
+  display: flex;
+  flex-direction: row;
+}
