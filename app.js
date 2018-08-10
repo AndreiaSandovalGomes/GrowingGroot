@@ -76,7 +76,7 @@ function createHtml(eachTask, div) {
   var divTasks = document.createElement("div");
   divTasks.className = "task";
   divTasks.innerHTML = eachTask + "<span class='pts'> - 10 pontos </span>";
-  if (div != "category-tips") {
+  if (div != ".category-tips") {
    divTasks.addEventListener("click", countPoints);
   }
   $(div).append(divTasks);
@@ -84,7 +84,7 @@ function createHtml(eachTask, div) {
 
 
 function countPoints() {
-  var sum = points + 10; // points vai ser o valor do banco de dados
+  var sum = 10; // points vai ser o valor do banco de dados
   console.log("a soma é: ")
   //enviar valor pro banco de dados
   // levelPoints(sum);
