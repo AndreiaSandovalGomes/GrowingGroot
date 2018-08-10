@@ -1,4 +1,6 @@
 var database = firebase.database();
+var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
+
 var points = 0; //valor do banco de dados
 $(".total-points").text(points);
 
@@ -13,22 +15,21 @@ $(document).ready(function() {
   // e.preventDefault();
 
 //barra de xp
-var totalPoints = 100;
-const levelOne = 30;
-const levelTwo = 50;
-const levelThree = 70;
-const levelFour = 100;
-function levelPoints (totalPoints){
-  var levelAtual = 0;
-  var changeLevel = $("#levelNivel");
-  if (totalPoints >= levelOne){
-    changeLevel.html("1");
-  }
-}
+// var totalPoints = 100;
+// const levelOne = 30;
+// const levelTwo = 50;
+// const levelThree = 70;
+// const levelFour = 100;
+// function levelPoints (totalPoints){
+//   var levelAtual = 0;
+//   var changeLevel = $("#levelNivel");
+//   if (totalPoints >= levelOne){
+//     changeLevel.html("1");
+//   }
+// }
   $(".btnSumPoints").click(addTasksClick);
 
-  // var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
-  // console.log(USER_ID);
+
 
   function addTasksClick(event) {
     event.preventDefault();
@@ -39,7 +40,7 @@ function levelPoints (totalPoints){
     createListItem(newTask, taskFromDB.key)
   }
   function addTaskToDB(text) {
-    return database.ref("Pontuacao" + USER_ID).push({
+    return database.ref("Pontuacao" + USER_ID).set({
       text: text
     });
   }
@@ -56,17 +57,17 @@ function levelPoints (totalPoints){
   };
 
 //barra de xp
-  // const levelOne = 30;
-  // const levelTwo = 50;
-  // const levelThree = 70;
-  // const levelFour = 100;
-  // function levelPoints (totalPoints){
-  //   var levelAtual = 0;
-  //   var changeLevel = $("#levelNivel");
-  //   if (totalPoints >= levelOne){
-  //     changeLevel.html("1");
-  //   }
-  // }
+  const levelOne = 30;
+  const levelTwo = 50;
+  const levelThree = 70;
+  const levelFour = 100;
+  function levelPoints (totalPoints){
+    var levelAtual = 0;
+    var changeLevel = $("#levelNivel");
+    if (totalPoints >= levelOne){
+      changeLevel.html("1");
+    }
+  }
 
   $(".btn-category").click(function(e) {
   e.preventDefault();

@@ -6,9 +6,8 @@ $(document).ready(function() {
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(response) {
-        // var userId = response.user.uid;
-        // redirectToTasks(userId);
-        window.location = "app.html";
+        var userId = response.user.uid;
+        redirectToTasks(userId);
       })
       .catch(function(error){
         var errorCode = error.code;
@@ -23,10 +22,9 @@ $(document).ready(function() {
 
       firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function(response) {
-          // var userId = response.user.uid;
-          // redirectToTasks(userId);
-          window.location = "app.html";
-        })
+          var userId = response.user.uid;
+          redirectToTasks(userId);
+      })
         .catch(function(error) {
           var errorCode = error.code;
           var errorMessage = error.message;
@@ -34,3 +32,7 @@ $(document).ready(function() {
         });
       })
   })
+
+  function redirectToTasks(userId) {
+    window.location = "tasks.html?id=" + userId;
+  }
