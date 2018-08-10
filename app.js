@@ -1,14 +1,5 @@
 // var database = firebase.database();
 // var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
-//
-// $(document).ready(function() {
-//   $('.title-splash').delay('1000').fadeIn('slow');
-//   $('.gif-splash').delay('2000').fadeIn('slow');
-//   $('.splash-content').delay('5000').fadeOut('slow');
-//   $('.splash').delay('6000').fadeOut('slow');
-//
-// var database = firebase.database();
-// var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
