@@ -72,7 +72,6 @@ function getTasksFromDB() {
 function showTasks(buttonCategory) {
   $(".category").text("");
   var status = $(".category").data("status");
-  console.log(status)
   if (status === "open") {
     var category = buttonCategory.id;
     var array = defineArray(category);
@@ -82,7 +81,6 @@ function showTasks(buttonCategory) {
     }
   $(".category").data( "status" , "close");
   } else if (status === "close") {
-    console.log("entrou no else")
     $(".category").text("");
     $(".category").data( "status", "open" );
   }
@@ -107,14 +105,16 @@ function createHtml(eachTask, div) {
   var divTasks = document.createElement("div");
   divTasks.className = "task";
   divTasks.innerHTML = eachTask + "<span class='pts'> - 10 pontos </span>";
-  divTasks.addEventListener("click", countPoints);
+  if (div != "category-tips") {
+   divTasks.addEventListener("click", countPoints);
+  }
   $(div).append(divTasks);
 }
 
 
 function countPoints() {
   var sum = points + 10; // points vai ser o valor do banco de dados
-  console.log("a soma é: " + sum)
+  console.log("a soma é: ")
   //enviar valor pro banco de dados
   // levelPoints(sum);
 }
