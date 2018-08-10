@@ -1,5 +1,5 @@
-// var database = firebase.database();
-// var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
+var database = firebase.database();
+var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
@@ -29,7 +29,8 @@ function getTasksFromDB() {
     .then(function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         var childData = childSnapshot.val();
-        $(".retorno").text(childData);
+        var retorno = $(".retorno").text(childData);
+      return childData;
       });
   });
 }
@@ -83,9 +84,9 @@ function createHtml(eachTask, div) {
 }
 
 
-function countPoints() {
-  var sum = 10; // points vai ser o valor do banco de dados
-  console.log("a soma é: ")
+function countPoints(retorno) {
+  var sum = retorno; // points vai ser o valor do banco de dados
+  console.log("a soma é: " + sum)
   //enviar valor pro banco de dados
   // levelPoints(sum);
 }

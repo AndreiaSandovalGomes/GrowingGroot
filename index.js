@@ -5,10 +5,8 @@ $(document).ready(function() {
 
 function signUpClick(event) {
   event.preventDefault();
-
   var email = $(".sign-email").val();
   var password = $(".sign-password").val();
-
   createUser(email, password);
 }
 
@@ -24,10 +22,8 @@ function createUser(email, password) {
 
 function signInClick(event) {
   event.preventDefault();
-
   var email = $(".sign-email").val();
   var password = $(".sign-password").val();
-
   signInUser(email, password);
 }
 
