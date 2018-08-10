@@ -1,14 +1,5 @@
 // var database = firebase.database();
 // var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
-//
-// $(document).ready(function() {
-//   $('.title-splash').delay('1000').fadeIn('slow');
-//   $('.gif-splash').delay('2000').fadeIn('slow');
-//   $('.splash-content').delay('5000').fadeOut('slow');
-//   $('.splash').delay('6000').fadeOut('slow');
-//
-// var database = firebase.database();
-// var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
@@ -107,6 +98,9 @@ function defineArray(localCategory) {
   if (localCategory === "fun") {
     return allTasks.tasksFun;
   }
+  if (localCategory === "tips") {
+    return allTasks.tips;
+  }
 }
 
 function createHtml(eachTask, div) {
@@ -126,7 +120,8 @@ function countPoints() {
 }
 
 var allTasks = {
-  tasksHome: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"],
-  tasksWork: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"],
-  tasksFun: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"]
+  tasksHome: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Apaguei as luzes ao sair do ambiente","Desliguei todos os aparelhos da tomada"],
+  tasksWork: ["Não usei copo descartável","Usei a escada", "Economizar papel","Meu lanche/almoço não gerou lixo","Não usei o carro"],
+  tasksFun: ["Não joguei lixo na rua","Não usei canudo", "Usei sacola retornável","Joguei o lixo na lixeira certa", "Fui de bike/a pé"],
+  tips: ["Gosta de cerveja? Consuma latinhas e evite o vidro. Fica Dica!!!","Sabe aquela gaveta cheia de remédios e pomadas vencidos que você não sabe o que fazer? Existem muitas farmácias com coletores para destinar corretamente estes descartes", "Sabe aquelas lâmpadas queimadas que não servem para mais nada. Existem grandes redes de mercados com coletores para estes descartes."]
 }
