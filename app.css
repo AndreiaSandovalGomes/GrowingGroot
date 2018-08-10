@@ -1,6 +1,9 @@
 body {
-  background-color: #0D0704;
+  background-color: black;
   font-family: 'Play', sans-serif;
+}
+.bg-brown {
+  background-color: #281916;
 }
 .splash, .header-title {
   font-family: 'Permanent Marker', cursive;
@@ -54,9 +57,17 @@ span.pts {
 header {
   height: 9vh;
 }
-
+.header-img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .header-logo {
-  height: 9vh;
+  width: 15vw;
+  height: 100%;
+}
+.header-hero {
+  width: 15vw;
+  height: 100%;
 }
 .level-progress{
   color:white;
