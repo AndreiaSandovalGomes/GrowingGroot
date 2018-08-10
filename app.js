@@ -1,7 +1,6 @@
 // var database = firebase.database();
 // var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
-
 $(document).ready(function() {
   $('.title-splash').delay('1000').fadeIn('slow');
   $('.gif-splash').delay('2000').fadeIn('slow');
@@ -32,37 +31,8 @@ function getTasksFromDB() {
         var childData = childSnapshot.val();
         $(".retorno").text(childData);
       });
-    });
+  });
 }
-
-
-  $(".btnSumPoints").click(addTasksClick);
-
-
-  function addTasksClick(event) {
-    event.preventDefault();
-
-    var newTask = $("#points").val();
-    var taskFromDB = addTaskToDB(newTask);
-
-    createListItem(newTask, taskFromDB.key)
-  }
-  function addTaskToDB(text) {
-    return database.ref("Pontuacao" + USER_ID).set({
-      text: text
-    });
-  }
-  function getTasksFromDB() {
-    database.ref("pontuacao" + USER_ID).once('value')
-      .then(function(snapshot) {
-        snapshot.forEach(function(childSnapshot) {
-          var childKey = childSnapshot.key;
-          var childData = childSnapshot.val();
-          createListItem(childData.text, childKey);
-          console.log("salvo");
-        });
-      });
-  };
 
   $(".btn-category").click(function(e) {
   e.preventDefault();
@@ -73,7 +43,6 @@ function getTasksFromDB() {
 function showTasks(buttonCategory) {
   $(".category").text("");
   var status = $(".category").data("status");
-  console.log(status)
   if (status === "open") {
     var category = buttonCategory.id;
     var array = defineArray(category);
@@ -83,7 +52,6 @@ function showTasks(buttonCategory) {
     }
   $(".category").data( "status" , "close");
   } else if (status === "close") {
-    console.log("entrou no else")
     $(".category").text("");
     $(".category").data( "status", "open" );
   }
@@ -99,26 +67,32 @@ function defineArray(localCategory) {
   if (localCategory === "fun") {
     return allTasks.tasksFun;
   }
+  if (localCategory === "tips") {
+    return allTasks.tips;
+  }
 }
 
 function createHtml(eachTask, div) {
   var divTasks = document.createElement("div");
   divTasks.className = "task";
   divTasks.innerHTML = eachTask + "<span class='pts'> - 10 pontos </span>";
-  divTasks.addEventListener("click", countPoints);
+  if (div != ".category-tips") {
+   divTasks.addEventListener("click", countPoints);
+  }
   $(div).append(divTasks);
 }
 
 
 function countPoints() {
-  var sum = points + 10; // points vai ser o valor do banco de dados
-  console.log("a soma é: " + sum)
+  var sum = 10; // points vai ser o valor do banco de dados
+  console.log("a soma é: ")
   //enviar valor pro banco de dados
   // levelPoints(sum);
 }
 
 var allTasks = {
-  tasksHome: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"],
-  tasksWork: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"],
-  tasksFun: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Desliguei as luzes ao sair do ambiente"]
+  tasksHome: ["Separei lixo reciclável","Desliguei a torneira ao escovar os dentes", "Fechei o chuveiro para me ensaboar","Apaguei as luzes ao sair do ambiente","Desliguei todos os aparelhos da tomada"],
+  tasksWork: ["Não usei copo descartável","Usei a escada", "Economizar papel","Meu lanche/almoço não gerou lixo","Não usei o carro"],
+  tasksFun: ["Não joguei lixo na rua","Não usei canudo", "Usei sacola retornável","Joguei o lixo na lixeira certa", "Fui de bike/a pé"],
+  tips: ["Gosta de cerveja? Consuma latinhas e evite o vidro. Fica Dica!!!","Sabe aquela gaveta cheia de remédios e pomadas vencidos que você não sabe o que fazer? Existem muitas farmácias com coletores para destinar corretamente estes descartes", "Sabe aquelas lâmpadas queimadas que não servem para mais nada. Existem grandes redes de mercados com coletores para estes descartes."]
 }
