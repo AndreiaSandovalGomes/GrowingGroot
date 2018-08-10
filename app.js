@@ -12,20 +12,7 @@ $(document).ready(function() {
   // $(".includePoints").click(function(e))
   // e.preventDefault();
 
-//barra de xp
-var totalPoints = 100;
-const levelOne = 30;
-const levelTwo = 50;
-const levelThree = 70;
-const levelFour = 100;
-function levelPoints (totalPoints){
-  var levelAtual = 0;
-  var changeLevel = $("#levelNivel");
-  if (totalPoints >= levelOne){
-    changeLevel.html("1");
-  }
-}
-  $(".btnSumPoints").click(addTasksClick);
+$(".btnSumPoints").click(addTasksClick);
 
   // var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
   // console.log(USER_ID);
