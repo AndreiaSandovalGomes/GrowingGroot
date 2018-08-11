@@ -12,7 +12,7 @@ amarelinho - #E3E06B
 
 */
 body {
-  background-color: #281916;
+  background-color: black;
   color: #F5BC6B;
 }
 .main-gallery {
@@ -21,17 +21,22 @@ body {
   max-height: 736px;
   margin: auto;
   font-family: 'Play', sans-serif;
+  background-color: #281916;
 }
 .album-title {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 38px;
-  padding: 5px;
+  font-family: 'Permanent Marker';
+}
+.sticker-field {
+  width: 49%;
+  display: inline-block;
+  margin-top: 4vh;
 }
 .sticker-img {
   border: 4px solid #C9E5AB;
-  height: 180px;
-  width: 130px;
+  height: 25vh;
+  width: 18vh;
   background-color: #012010;
+  margin: auto;
 }
 .sticker-img img {
   height: 100%;
@@ -43,6 +48,6 @@ body {
 .hero-name {
   font-family: 'Permanent Marker', cursive;
   color: #C9E5AB;
-  font-size: 20px;
-  height: 70px;
+  width: 20vh;
+  margin: auto;
 }
