@@ -1,6 +1,13 @@
 var database = firebase.database();
 var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
+//barra de status
+const levelOne = 30;
+const levelTwo = 50;
+const levelThree = 70;
+const levelFour = 100;
+const levelFive = 150;
+
 //chamada de função para carregar os pontos
 levelPoints(getTasksFromDB());
 
@@ -83,12 +90,7 @@ function countPoints(retorno) {
   //enviar valor pro banco de dados
   // levelPoints(sum);
 }
-//barra de status
-const levelOne = 30;
-const levelTwo = 50;
-const levelThree = 70;
-const levelFour = 100;
-const levelFive = 150;
+
 function levelPoints(levelAtual){
   if(levelAtual < levelOne){
     $("#levelNivel").html("0");
